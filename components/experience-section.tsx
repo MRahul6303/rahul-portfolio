@@ -22,6 +22,14 @@ const experiences = [
     current: true,
   },
   {
+    title: "Consumer Behaviour & Travel Market Analysis Extern",
+    company: "Expedia — Remote",
+    period: "March 2025 - May 2025",
+    description:
+      "Designed and implemented a travel-industry survey solution using Google Forms and chatbot tools for targeted customer data collection. Analyzed qualitative and quantitative datasets in Google Sheets and Tableau, built dashboards, and presented weekly insights and recommendations to stakeholders across a 3-month externship.",
+    current: false,
+  },
+  {
     title: "Product Designer (Intern)",
     company: "Merck Sharp & Dohme — Dubai, UAE · Hybrid",
     period: "July 2024 - Jan 2025",

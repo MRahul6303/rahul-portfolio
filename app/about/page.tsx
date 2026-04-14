@@ -344,6 +344,13 @@ export default function AboutPage() {
                   active: true,
                 },
                 {
+                  title: "Consumer Behaviour & Travel Market Analysis Extern",
+                  period: "March 2025 - May 2025",
+                  company: "Expedia — Remote",
+                  desc: "Designed and implemented a survey solution using Google Forms and chatbot tools for targeted travel-industry customer data collection. Analyzed market datasets in Google Sheets and Tableau, built dashboards, and presented weekly insights and recommendations to stakeholders.",
+                  active: false,
+                },
+                {
                   title: "Product Designer (Intern)",
                   period: "July 2024 - Jan 2025",
                   company: "Merck Sharp & Dohme — Dubai, UAE · Hybrid",
@@ -466,7 +473,7 @@ export default function AboutPage() {
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button size="lg" variant="ghost" asChild>
                       <a
-                        href="https://www.linkedin.com/in/rahuldesigns/"
+                        href="https://www.linkedin.com/in/itsnotrahul/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

@@ -129,6 +129,14 @@ const EXPERIENCES = [
     desc: "Designed core system architecture for a full-stack SaaS platform integrating cross-departmental workflows using TypeScript, React, Next.js, and NestJS. Implemented a marketing automation agent leveraging Claude API that curtailed manual intervention by 70%, delivering AED 45K annual savings. Coordinated technical planning integrating PostgreSQL (Supabase) and NestJS 11.",
   },
   {
+    title: "Consumer Behaviour & Travel Market Analysis Extern",
+    company: "Expedia",
+    location: "Remote",
+    period: "March 2025 – May 2025",
+    active: false,
+    desc: "Designed and implemented a survey solution using Google Forms and chatbot tools for targeted customer data collection in the travel industry. Analyzed qualitative and quantitative travel market data in Google Sheets and Tableau, presented dashboards and weekly insights to stakeholders, and surfaced correlations tied to a 15% increase in eco-conscious bookings.",
+  },
+  {
     title: "Web Developer Intern",
     company: "MSD GCC",
     location: "Dubai, UAE",
@@ -913,9 +921,10 @@ function WelcomeBlock() {
             <div className="welcome-item"><span className="cyan bold">/skills</span></div>
             <div className="welcome-item"><span className="cyan bold">/experience</span></div>
             <div className="welcome-item"><span className="cyan bold">/contact</span></div>
-            <div className="welcome-item" style={{ marginTop: 6 }}>
-              <span className="muted">... /help for all commands</span>
-            </div>
+            <div className="welcome-item"><span className="cyan bold">/social</span></div>
+            <div className="welcome-item"><span className="cyan bold">/resume</span></div>
+            <div className="welcome-item"><span className="cyan bold">/clear</span></div>
+            <div className="welcome-item"><span className="cyan bold">/help</span></div>
             <div className="welcome-item">
               <span className="muted">Type /secrets if you like finding hidden things.</span>
             </div>
@@ -960,6 +969,18 @@ function WelcomeBlock() {
           <span className="desc">Get in touch</span>
         </div>
         <div className="nav-hint">
+          <span className="cmd">/social</span>
+          <span className="desc">Social links & profiles</span>
+        </div>
+        <div className="nav-hint">
+          <span className="cmd">/resume</span>
+          <span className="desc">Download Rahul&apos;s resume</span>
+        </div>
+        <div className="nav-hint">
+          <span className="cmd">/clear</span>
+          <span className="desc">Clear the terminal</span>
+        </div>
+        <div className="nav-hint">
           <span className="cmd">/help</span>
           <span className="desc">List all commands</span>
         </div>
@@ -1001,6 +1022,13 @@ function AboutOutput() {
         Moved to <span className="accent bold">MSD GCC</span> as a Web Developer
         Intern — revamped the GCC Pulse platform and integrated Figma-to-Code
         pipelines, cutting design-to-development cycle time by 25%.
+      </div>
+      <div className="output-line" style={{ marginBottom: 8 }}>
+        Completed a <span className="accent bold">Consumer Behaviour &amp; Travel Market Analysis Extern</span>
+        {" "}at <span className="accent bold">Expedia</span> — designed survey workflows,
+        analyzed travel market data in Google Sheets and Tableau, and presented
+        weekly insights and dashboards to stakeholders across a 3-month remote
+        project.
       </div>
       <div className="output-line" style={{ marginBottom: 12 }}>
         <span className="accent">Currently at{" "}
@@ -1195,10 +1223,10 @@ function ContactOutput() {
           <span className="social-label">Phone</span>
           <span className="social-url">+971 58 549 6303</span>
         </a>
-        <a href="https://www.linkedin.com/in/rahuldesigns/" target="_blank" rel="noopener noreferrer" className="social-link">
+        <a href="https://www.linkedin.com/in/itsnotrahul/" target="_blank" rel="noopener noreferrer" className="social-link">
           <span className="social-badge badge-blue">in</span>
           <span className="social-label">LinkedIn</span>
-          <span className="social-url">linkedin.com/in/rahuldesigns ↗</span>
+          <span className="social-url">linkedin.com/in/itsnotrahul ↗</span>
         </a>
         <div className="social-link" style={{ cursor: "default" }}>
           <span className="social-badge badge-purple">📍</span>
@@ -1219,20 +1247,15 @@ function SocialOutput() {
       <div className="heading">Social & Profiles</div>
       <hr className="divider" />
       <div className="animate-stagger">
-        <a href="https://www.linkedin.com/in/rahuldesigns/" target="_blank" rel="noopener noreferrer" className="social-link">
+        <a href="https://www.linkedin.com/in/itsnotrahul/" target="_blank" rel="noopener noreferrer" className="social-link">
           <span className="social-badge badge-blue">in</span>
           <span className="social-label">LinkedIn</span>
-          <span className="social-url">/in/rahuldesigns ↗</span>
+          <span className="social-url">/in/itsnotrahul ↗</span>
         </a>
         <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className="social-link">
           <span className="social-badge badge-blue">Bē</span>
           <span className="social-label">Behance</span>
           <span className="social-url">behance.net/rahulmahesh ↗</span>
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
-          <span className="social-badge badge-purple">ig</span>
-          <span className="social-label">Instagram</span>
-          <span className="social-url">@rahulmahesh ↗</span>
         </a>
         <a href="https://www.youtube.com/@itsnotrahul" target="_blank" rel="noopener noreferrer" className="social-link">
           <span className="social-badge badge-red">YT</span>

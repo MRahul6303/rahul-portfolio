@@ -4,10 +4,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const socialLinks = [
-  { label: "Instagram", href: "https://instagram.com" },
   { label: "Behance", href: "https://behance.net" },
   { label: "Spotify", href: "https://spotify.com" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/rahuldesigns/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/itsnotrahul/" },
 ];
 
 export function Footer() {
