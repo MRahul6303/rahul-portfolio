@@ -1,0 +1,74 @@
+---
+title: "Construction Tracker - Joseph Group"
+year: 2025
+role: ["Product Design", "Full-Stack Engineering", "Systems Architecture"]
+tags: ["Product Design", "Full-Stack Development", "Workflow Automation", "Construction Tech", "SaaS"]
+impact_metric: "End-to-end system transformation"
+summary: "Designed and engineered a full-scale Construction Installation Tracking System from the ground up—combining UX design, systems architecture, and advanced workflow automation."
+cover: "/images/projects/construction-installation-tracker/Devices on a podium mockup.png"
+gallery:
+  - "/images/projects/construction-installation-tracker/MacBook Mockup, Floating.png"
+  - "/images/projects/construction-installation-tracker/dashboards.png"
+team: ["Solo Designer & Engineer"]
+tools: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL", "Real-time Sync"]
+timeline: "Full project lifecycle"
+featured: true
+links:
+  live: "#"
+---
+
+## Project Overview
+
+This is a comprehensive Construction Project Management System designed to track installation progress (Electrical, Plumbing, Flooring, etc.) across a large building complex (Buildings A, B, C). It facilitates real-time collaboration between Supervisors (on-site) and Admins (office).
+
+## Technology Stack
+
+Frontend: React 18, TypeScript, Vite, Tailwind CSS.
+Backend: Supabase (PostgreSQL, Auth, Real-time).
+State Management: React Context + useReducer for complex project state.
+Routing: Hash-based routing (e.g., #/supervisor, #/admin) to handle navigation without server-side configuration.
+
+## Architecture & Core Components
+
+## 1. Database (PostgreSQL + Supabase)
+
+The database is the source of truth and is heavily structured:
+
+**Hierarchy:** buildings → wings → rooms (defines the physical space).
+
+**Work Definitions:** jobs (e.g., Electrical) → sub_works (e.g., Wiring).
+
+**Execution:**
+- **tasks**: The central table recording work done, status, photos, and reviews.
+- **supervisor_assignments**: Links specific supervisors to floor ranges (Critical for access control).
+- **room_status**: A denormalized table for fast status lookups (likely for heatmaps/dashboards).
+
+**Automation:** Uses PostgreSQL Triggers (broadcast_task_submission, broadcast_task_review) to automatically update status tables and notify clients via Supabase Realtime.
+
+## 2. Frontend Application (App.tsx)
+
+**Authentication:** Wrapped in an AuthContext. Handles login and restores user sessions.
+
+**Role-Based Access:**
+- **Admin**: Full access to manage users, assign scopes, and review tasks (AdminReviewWorkspace).
+- **Supervisor**: Restricted view based on supervisor_assignments. Can only submit work for their assigned floors (SupervisorWorkspace).
+- **Incharge / Report Manager**: Read-only or high-level dashboard access.
+
+**Data Handling:**
+- **Caching**: Caches rooms data in localStorage to reduce API calls and improve performance.
+- **Real-time**: Subscribes to tasks and supervisor_assignments changes so the UI updates instantly without reloading.
+
+## 3. Key Workflows
+
+**Task Submission:** A supervisor selects a room and work item, takes a photo, and submits. This creates a task record and triggers a real-time update.
+
+**Review Process:** Admins see pending tasks. They can Approve (turns green) or Reject (turns red). Rejections require a note.
+
+**Phase 2 Features:** The code contains references to "Phase 2" components like BOQ (Bill of Quantities) and Integrated Works, suggesting the system is evolving to track material quantities and more complex work dependencies.
+
+## Key Directories
+
+- **database/**: Contains SQL scripts for setting up the schema, triggers, and RLS policies.
+- **src/components/**: UI components separated by role (admin/, supervisor/).
+- **src/services/**: Supabase client configuration and API wrappers.
+- **src/types.ts**: TypeScript definitions ensuring type safety across the app.
